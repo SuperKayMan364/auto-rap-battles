@@ -1,0 +1,52 @@
+if game.PlaceId == 579955134 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Auto Rap Battles Serverside GUI", "Sentinel")
+    
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Hats")
+MainSection:NewButton("Dominus Empyreus", "Gives you the hat Dominus Empyreus", function(v)
+    game.Workspace.Hats:FireServer("Dominus Empyreus'", 0)
+end)
+MainSection:NewButton("Backwards Baseball Cap", "Gives you the hat Backwards Baseball Cap", function(v)
+    game.Workspace.Hats:FireServer("Backwards Baseball Cap", 0)
+end)
+MainSection:NewButton("Golden Headphones", "Gives you the hat Golden Headphones", function(v)
+    game.Workspace.Hats:FireServer("Golden Headphones", 0)
+end)
+MainSection:NewButton("Acheo's Pot", "Gives you the hat Acheo's Pot", function(v)
+    game.Workspace.Hats:FireServer("Acheo's Pot", 0)
+end)
+MainSection:NewButton("Black Fedora", "Gives you the hat Black Fedora", function(v)
+    game.Workspace.Hats:FireServer("Black Fedora", 0)
+end)
+
+local MainSection = Main:NewSection("Votes")
+MainSection:NewButton("Give 100 votes to player 1", "Use when vote count starts", function(v)
+    for i=1,100 do
+    local args = {
+    [1] = false,
+    [2] = "p1"
+}
+
+workspace.Votes:FireServer(unpack(args))
+end
+end)
+MainSection:NewButton("Give 100 votes to player 2", "Use when vote count starts", function(v)
+    for i=1,100 do
+    local args = {
+    [1] = false,
+    [2] = "p2"
+}
+
+workspace.Votes:FireServer(unpack(args))
+end
+end)
+
+local MainSection = Main:NewSection("Other")
+MainSection:NewButton("Tp to stage", "Teleports to DJ", function(v)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-88.145134, 60.9199867, -213.246567)
+end)
+MainSection:NewButton("Chat Troll GUI", "Fake Chat", function(v)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperKayMan364/Fake-Chat/main/Script", true))()
+end)
+end
